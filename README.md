@@ -18,13 +18,11 @@ Please refer to [here](https://github.com/ruotianluo/self-critical.pytorch#prepa
 2. Please download the VC features
 3. Please download the Updown features
 
-## Pretrained models
+## Pretrained model
 
-Checkout [MODEL_ZOO.md](MODEL_ZOO.md).
+The pre-trained model can be download [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data)
 
-If you want to do evaluation only, you can then follow [this section](#generate-image-captions) after downloading the pretrained models (and also the pretrained resnet101 or precomputed bottomup features, see [data/README.md](data/README.md)).
-
-#### Start training
+## Start training
 ```bash
 $ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --checkpoint_path log_hc --save_checkpoint_every 4000 --val_images_use 2500 --max_epochs 80 --rnn_size 2048 --input_encoding_size 1024 --self_critical_after 30 --language_eval 1 --learning_rate_decay_start 0 --scheduled_sampling_start 0 --use_vc
 ```
