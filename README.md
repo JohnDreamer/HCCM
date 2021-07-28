@@ -14,13 +14,14 @@ The submodules (cider and coco-caption) could be downloaded [here](https://githu
 Please refer to [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data)
 
 ## Download Pre-processed Features
-1. Please download the Updown features and VC features for body part regions.
-2. Please download the VC features
-3. Please download the Updown features
+1. Please download the [Updown features](https://drive.google.com/drive/folders/1XjsxL-hy6fG5h7EkekoUclk345BLr9hd?usp=sharing) and [VC features](https://drive.google.com/drive/folders/1XjsxL-hy6fG5h7EkekoUclk345BLr9hd?usp=sharing) for body part regions.
+2. Please download the [VC features](https://drive.google.com/file/d/1O-JAYhdF3z8fkLivXZzllT8PotV1MlRv/view?usp=sharing)
+3. Please download the [Updown features](https://drive.google.com/file/d/1J62N8HLjNaPell0UdByMyt-bbl8UGlSL/view?usp=sharing)
+4. Please download the [part masks](https://drive.google.com/drive/folders/1XjsxL-hy6fG5h7EkekoUclk345BLr9hd?usp=sharing)
 
 ## Pretrained model
 
-The pre-trained model can be download [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data)
+The pre-trained model can be download [here](https://drive.google.com/drive/folders/1PY6tvHWLpoZlXdhewaXv5SpJAJUKv4Mp?usp=sharing)
 
 ## Start training
 ```bash
