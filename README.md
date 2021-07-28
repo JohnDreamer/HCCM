@@ -15,7 +15,7 @@ HC-COCO contains 16,125 images and 78,462 sentences, with more than 70% of the c
 The submodules (cider and coco-caption) could be downloaded [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data)  
 
 ## Prepare Data
-Please refer to [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data)
+Please refer to [here](https://github.com/ruotianluo/self-critical.pytorch#prepare-data) and place the [file](https://drive.google.com/file/d/1_WAxGJ3uhE7wrwKmDzvX-aFJxQxF_Crm/view?usp=sharing) into ./coco-caption/annotations/
 
 ## Download Pre-processed Features
 1. Please download the [Updown features](https://drive.google.com/drive/folders/1XjsxL-hy6fG5h7EkekoUclk345BLr9hd?usp=sharing) and [VC features](https://drive.google.com/drive/folders/1XjsxL-hy6fG5h7EkekoUclk345BLr9hd?usp=sharing) for body part regions.
