@@ -41,7 +41,7 @@ $ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocotalk.j
 ```
 ## Self-critical Training
 ```bash
-$ python train_hc.py --id HCCM --caption_model HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --start_from log_hc --checkpoint_path log_hc --save_checkpoint_every 4000 --language_eval 1 --val_images_use 2500 --self_critical_after 30 --rnn_size 2048 --input_encoding_size 1024 --cached_tokens coco-train-idxs --max_epoch 80
+$ python train_hc.py --id HCCM --caption_model HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-5 --start_from log_hc --checkpoint_path log_hc --save_checkpoint_every 4000 --language_eval 1 --val_images_use 2500 --self_critical_after 30 --rnn_size 2048 --input_encoding_size 1024 --cached_tokens coco-train-idxs --max_epoch 80
 ```
 
 ## Evaluation
