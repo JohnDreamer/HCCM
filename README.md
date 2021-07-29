@@ -5,7 +5,7 @@ This is an official Pytorch implementation for Human-Centric Image Captioning ta
 This repo is modified from the well-known [codebase](https://github.com/ruotianluo/self-critical.pytorch) by [Ruotian Luo](https://github.com/ruotianluo).
 
 ## HC-COCO
-HC-COCO contains 16,125 images and 78,462 sentences, with more than 70% of the captions focusing on human actions and more than 49% focusing on human-object interactions. Furthermore, ten body part bounding boxes for each person are annotated. The dataset can be downloaded [here](https://drive.google.com/file/d/16R3BUK6iOv9v3PgGgmPg9ACP-Y9ZxG9N/view?usp=sharing)
+HC-COCO, based on MSCOCO, is specially designed for Human-Centric Image Captioning task. It contains 16,125 images and 78,462 sentences, with more than 70% of the captions focusing on human actions and more than 49% focusing on human-object interactions. Furthermore, ten body part bounding boxes for each person are annotated. The dataset can be downloaded [here](https://drive.google.com/file/d/16R3BUK6iOv9v3PgGgmPg9ACP-Y9ZxG9N/view?usp=sharing)
 
 ## Requirements
 - Python 3.6
