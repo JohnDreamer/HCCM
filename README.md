@@ -29,7 +29,7 @@ The pre-trained model can be download [here](https://drive.google.com/drive/fold
 
 ## Start training
 ```bash
-$ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --checkpoint_path log_hc --save_checkpoint_every 4000 --val_images_use 2500 --max_epochs 80 --rnn_size 2048 --input_encoding_size 1024 --self_critical_after 30 --language_eval 1 --learning_rate_decay_start 0 --scheduled_sampling_start 0 --use_vc
+$ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocohc.json --input_label_h5 data/cocohc_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --checkpoint_path log_hc --save_checkpoint_every 4000 --val_images_use 2500 --max_epochs 80 --rnn_size 2048 --input_encoding_size 1024 --self_critical_after 30 --language_eval 1 --learning_rate_decay_start 0 --scheduled_sampling_start 0 --use_vc
 ```
 
 NOTE: This command mix the cross-entropy and self-critical training. If you want to training them separately, you may need:
@@ -37,11 +37,11 @@ NOTE: This command mix the cross-entropy and self-critical training. If you want
 
 ## Cross Entropy Training
 ```bash
-$ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --checkpoint_path log_hc --save_checkpoint_every 4000 --val_images_use 2500 --rnn_size 2048 --input_encoding_size 1024 --max_epochs 30 --language_eval 1
+$ python train_hc.py --id HCCM --caption_model HCCM --input_json data/cocohc.json --input_label_h5 data/cocohc_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-4 --checkpoint_path log_hc --save_checkpoint_every 4000 --val_images_use 2500 --rnn_size 2048 --input_encoding_size 1024 --max_epochs 30 --language_eval 1
 ```
 ## Self-critical Training
 ```bash
-$ python train_hc.py --id HCCM --caption_model HCCM --caption_model HCCM --input_json data/cocotalk.json --input_label_h5 data/cocotalk_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-5 --start_from log_hc --checkpoint_path log_hc --save_checkpoint_every 4000 --language_eval 1 --val_images_use 2500 --self_critical_after 30 --rnn_size 2048 --input_encoding_size 1024 --cached_tokens coco-train-idxs --max_epoch 80
+$ python train_hc.py --id HCCM --caption_model HCCM --caption_model HCCM --input_json data/cocohc.json --input_label_h5 data/cocohc_label.h5 --input_att_dir_vc [the/path/to/VC_Feature/trainval] --input_att_dir [the/path/to/Updown_Feature] --body_part_dir [the/path/to/body_part_Updown_Feature] --body_part_vc_dir [the/path/to/body_part_VC_Feature] --part_mask_dir [the/path/to/part_mask_dir] --batch_size 10 --learning_rate 2e-5 --start_from log_hc --checkpoint_path log_hc --save_checkpoint_every 4000 --language_eval 1 --val_images_use 2500 --self_critical_after 30 --rnn_size 2048 --input_encoding_size 1024 --cached_tokens coco-train-idxs --max_epoch 80
 ```
 
 ## Evaluation
