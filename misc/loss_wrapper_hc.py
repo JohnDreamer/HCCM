@@ -38,24 +38,7 @@ class LossWrapper(torch.nn.Module):
         else:
             self.crit = utils.LanguageModelCriterion()
 
-        if opt.enable_no_interaction == 1:
-            counts = json.load(open('data/part_hoi_class_count.json', 'r'))
-            hoi_count = counts['hoi_count']
-            part_state_count = counts['part_state_count']
-            hoi_pos_weight = torch.Tensor(hoi_count)
-            part_state_pos_weight = torch.Tensor(part_state_count)
-            hoi_pos_weight = 1.0 / (hoi_pos_weight / torch.min(hoi_pos_weight))
-            part_state_pos_weight = 1.0 / (part_state_pos_weight / torch.min(part_state_pos_weight))
-            hoi_pos_weight = hoi_pos_weight / torch.min(hoi_pos_weight) / 50.0
-            part_state_pos_weight = part_state_pos_weight / torch.min(part_state_pos_weight) / 50.0
-            hoi_pos_weight = hoi_pos_weight.unsqueeze(0)
-            part_state_pos_weight = part_state_pos_weight.unsqueeze(0)
-            self.hoi_crit = utils.ClassificationCriterionBCE(hoi_pos_weight)
-            self.part_state_crit = utils.ClassificationCriterionBCE(part_state_pos_weight)
-        else:
-            self.hoi_crit = utils.ClassificationCriterionBCE()
-            self.part_state_crit = utils.ClassificationCriterionBCE()
-
+        
 
         self.obj_crit = utils.ClassificationCriterion()
 
